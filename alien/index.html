@@ -1,0 +1,171 @@
+
+<!DOCTYPE hmtl>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Alien Zapper!</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+    <div id="backwrap">
+
+        <img src="img/back.png" id="tv">
+
+        <div id="gameboard" onmousedown="document.getElementById('sound').play();">
+            <audio id="music"><source src="audio/music.mp3" type="audio/mp3"></audio>
+            
+            <audio id="click"><source src="audio/click1.mp3" type="audio/mp3"></audio>
+
+
+            <img src="img/1.gif" id="obj1" 
+            onmouseover="document.getElementById('sound1').play();" onclick="clickCounter(10, 'obj1')">
+            <audio id="sound1"><source src="audio/beep.wav" type="audio/mp3"></audio>
+            <audio id="explosion"><source src="audio/explosion.wav" type="audio/mp3"></audio>
+
+            <img src="img/1.gif" id="obj2" 
+            onmouseover="document.getElementById('sound1').play();" onclick="clickCounter(10, 'obj2')">
+            <audio id="sound2"><source src="audio/beep.wav" type="audio/mp3"></audio>
+
+            <img src="img/1.gif" id="obj3" 
+            onmouseover="document.getElementById('sound1').play();" onclick="clickCounter(10, 'obj3')">
+            <audio id="sound3"><source src="audio/beep.wav" type="audio/mp3"></audio>
+
+            <img src="img/box.png" id="boxes">
+        </div>
+        <div id="score">
+            <h4>Zap the aliens! Earn 300 points to win.</h4>
+            <h2 id="countdown">Time:
+            <br> 
+            <span id="timer">60</span></h2>
+            <br>
+            <br>
+            <br>
+            <h2>Points:&nbsp;
+            <br>
+            <span id="result"></span></h2>
+        </div>
+
+        <img src="img/gun.png" id="gun">
+
+        <div id="start" onclick="beginGame()">
+        <audio id="startSound";><source src="audio/start.wav" type="audio/mp3"></audio>
+        <h3>START</h3></div>
+        
+
+        <div id="win">
+            <audio id="winsound"><source src="audio/win.wav" type="audio/mp3"></audio>
+            <center><h1>YOU WIN!</h1></center>
+            <center><h5>Refresh to Start Again</h5></center>
+        </div>
+
+        <div id="lose">
+            <audio id="losesound"><source src="audio/lose.wav" type="audio/mp3"></audio>
+            <center><h1>YOU LOSE!</h1></center>
+            <center><h5>Refresh to Start Again</h5></center>
+        </div>
+
+    </div>
+    </body>
+
+
+<script>
+
+let timeInSeconds = 60;
+let canClick = {
+obj1: true,
+obj2: true,
+obj3: true
+};
+
+function beginGame() {
+    document.getElementById('startSound').play();
+    document.getElementById('music').play();
+    localStorage.clear();
+    localStorage.points= 0;
+    document.getElementById("result").innerHTML=localStorage.points;
+    document.getElementById("obj1").style.webkitAnimationPlayState = "running";
+    document.getElementById("obj2").style.webkitAnimationPlayState = "running";
+    document.getElementById("obj3").style.webkitAnimationPlayState = "running";
+    const timerInterval = setInterval(updateTimer, 1000);
+    setTimeout(gameOver, 61000);
+    document.getElementById("start").style.display = 'none'
+}
+
+function updateTimer() {
+    const timerElement = document.getElementById("timer");
+    timerElement.textContent = timeInSeconds;
+
+    if (timeInSeconds <= 0) {
+        clearInterval(timerInterval);
+    } else {
+        timeInSeconds--;
+    }
+    
+}
+
+function clickCounter(points, objId) {
+if (canClick[objId]) {
+    canClick[objId] = false; // Disable clicks
+
+    localStorage.points = Number(localStorage.points) + points;
+    document.getElementById("result").innerHTML = localStorage.points;
+
+    let obj = document.getElementById(objId);
+    let originalSrc = obj.src;
+    obj.src = "img/2.png"; // Change the image
+
+    // Play the click sound
+    document.getElementById('explosion').play();
+
+    setTimeout(function() {
+    obj.src = originalSrc; // Revert the image
+    canClick[objId] = true; // Re-enable clicks
+    }, 2000); // 1000 milliseconds = 1 second
+    }
+}
+
+
+document.addEventListener('mousemove', function(e){
+    let moveX = -(e.clientX * -1 /5);
+    let moveY = -(e.clientY * -1 /5);
+    document.getElementById('gun').style.transform = `translate(${moveX}px, ${moveY}px)`;
+});
+
+function gameOver() {
+    if (timeInSeconds == 0) {
+    if (localStorage.points >= 300) {
+        document.getElementById('winsound').play();
+        youWin();
+    } else {
+        document.getElementById('losesound').play();
+        youLose();
+    }
+    }
+}
+function youWin() {
+    document.getElementById("win").style.display = 'block'
+    localStorage.clear();
+    local.clickcount = 0;
+    document.getElementById("result").innerHTML = localStorage.clickcount; 
+    document.getElementById("obj1").style.WebkitAnimationPlayState = "paused"; 
+    document.getElementById("obj2").style.WebkitAnimationPlayState = "paused"; 
+    document.getElementById("obj3").style.WebkitAnimationPlayState = "paused"; 
+    
+}
+
+function youLose() {
+    document.getElementById("lose").style.display = 'block'
+    localStorage.clear();
+    local.clickcount = 0;
+    document.getElementById("result").innerHTML = localStorage.clickcount; 
+    document.getElementById("obj1").style.WebkitAnimationPlayState = "paused"; 
+    document.getElementById("obj2").style.WebkitAnimationPlayState = "paused"; 
+    document.getElementById("obj3").style.WebkitAnimationPlayState = "paused"; 
+}
+
+</script>
+</html>

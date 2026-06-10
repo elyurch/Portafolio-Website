@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0D77EE">
+    <title>Glory for Goblins - Unreal Engine Game</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tourney:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="styleProject.css">
+
+</head>
+
+<body>
+    <header>
+    </header>
+    
+    <!-- PROJECT HEADER SECTION -->
+    <section class="diagonalColor project-hero">
+        <div class="wrapperColor project-header-wrapper">
+            <br>
+            <br>
+            <h1 class="project-detail-title">Glory for Goblins</h1>
+            <br>
+            
+            <!-- Project metadata in the style of the 'Game Dev' block -->
+            <div class="contrastBlock project-meta">
+                Unreal Engine | MonRiverGames Project | On Going
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- MAIN PROJECT DETAIL CONTENT -->
+    <section id="projectDetailContent"> 
+        <div class="content-wrapper">
+
+            <div class="image-container video-container">
+                <div class="video-wrapper">
+                    <iframe 
+                        src="https://www.youtube.com/embed/0R9DW9svUe4?si=nIWoaxx69fSn62yx" 
+                        title="Glory for Goblins - Gameplay" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+    
+                <p class="caption">
+                Gameplay Video of Glory for Goblins
+                </p>
+                <div class="colorbar_footer"></div>
+            </div>
+            
+            <!-- SECTION 1: General Information -->
+            <h3>Description</h3>
+            <p>
+                Glory for Goblins is a light real time strategy game where you control the king of the goblins. The humans have taken over the goblins forest. You must command your hoard in order to gather resources and destroy the human houses.
+                <br>Glory for Goblins began as a project for intermediate game design class. Continue to developed it for studio project with monrivergames.<br>
+            </p>
+
+            <P>
+                <strong>Role:</strong> Art Generalist<br>
+                <strong>Tools:</strong> Unreal Engine, Blender, Adobe Fresco<br><br>
+                <strong>Original Team:</strong><br>
+                Jorge Rosero (Art Generalist)<br>
+                Brodey Cook (Programer)<br>
+                Thee Bosley (Programmer UI Designer)<br><br>
+                <strong>Fall 2025</strong><br>
+                <strong>Leads:</strong><br>
+                Brodey Cook (Concepting and Level Design)<br>
+                Jorge Rosero (Concepting, Art, and Level Design)<br><br>
+                <strong>Team Members:</strong><br>
+                Alexander Hardy (Level Design Assistance)<br>
+                Ryleigh Horodyski (Art Assistance)<br>
+                Kayden Thomas (Music)<br><br>
+                <strong>Duration:</strong> Spring 2025 - On Going<br>
+
+            </P>
+
+          
+            <h3>Contribuitions</h3>
+            <div class="topline"></div><br>
+
+            <!-- SECTION 2: Toon Shaders and Materials -->
+            <h4>Toon Offset Material</h4>
+            
+            <div class="image-container image-gallery">
+                <div class="gallery-slides">
+                    <div class="image-slide active">
+                        <img src="img/Material.png" 
+                            alt="Material blueprint" 
+                            class="project-image"
+                            onerror="this.onerror=null;this.src='https://placehold.co/800x450/07376f/FFFFFF?text=Visual+Placeholder'">
+                        <p class="caption">Material blueprint</p>
+                    </div>
+        
+                    <div class="image-slide">
+                        <img src="img/worldBend.png" 
+                            alt="Offset material in engine" 
+                            class="project-image"
+                            onerror="this.onerror=null;this.src='https://placehold.co/800x450/07376f/FFFFFF?text=Visual+Placeholder'">
+                        <p class="caption">Offset material in engine</p>
+                    </div>
+        
+                </div> 
+                <button class="gallery-control prev-btn">❮</button>
+                <button class="gallery-control next-btn">❯</button>
+                <div class="colorbar_footer"></div>
+            </div>
+            <p>
+            <strong>Toon Shaders, World bending implementation</strong><br>
+            The post rendering of the toon shader created some issues in the implementation. So the solution was to make a material to have the subdivision of the intensity of the light in order to create the color sections. A material function is used in order to alter the rendering offset in order to achieve the bending of the world.             </p>
+            </p>
+            <div class="topline"></div><br>
+
+            <!-- SECTION 3: Characters -->
+            <h4>Character Creation Pipeline</h4>
+            
+            <div class="image-container image-gallery">
+                <div class="gallery-slides">
+                    <div class="image-slide active">
+                        <img src="img/knight t pose.png" 
+                            alt="Sketches of knight T pose" 
+                            class="project-image"
+                            onerror="this.onerror=null;this.src='https://placehold.co/800x450/07376f/FFFFFF?text=Visual+Placeholder'">
+                        <p class="caption">Sketches of knight T-pose </p>
+                    </div>
+        
+                    <div class="image-slide">
+                        <img src="img/Knight3d.png" 
+                            alt="In Blender knight 3d model" 
+                            class="project-image"
+                            onerror="this.onerror=null;this.src='https://placehold.co/800x450/07376f/FFFFFF?text=Visual+Placeholder'">
+                        <p class="caption">In Blender knight 3d model</p>
+                    </div>
+        
+                    <div class="image-slide">
+                        <img src="img/KnightWeight.png" 
+                            alt="In Blender weight painting for rigging" 
+                            class="project-image"
+                            onerror="this.onerror=null;this.src='https://placehold.co/800x450/07376f/FFFFFF?text=Visual+Placeholder'">
+                        <p class="caption">In Blender weight painting for rigging</p>
+
+                    </div>
+
+                    <div class="image-slide">
+                        <img src="img/knightAnimation.png" 
+                            alt="In Blender animation" 
+                            class="project-image"
+                            onerror="this.onerror=null;this.src='https://placehold.co/800x450/07376f/FFFFFF?text=Visual+Placeholder'">
+                        <p class="caption">In Blender animation</p>
+                    </div>
+
+                    <div class="image-slide">
+                        <img src="img/knightABP.png" 
+                            alt="In Unreal Enigne animation blueprint" 
+                            class="project-image"
+                            onerror="this.onerror=null;this.src='https://placehold.co/800x450/07376f/FFFFFF?text=Visual+Placeholder'">
+                        <p class="caption">In Unreal Enigne animation blueprint</p>
+                    </div>
+
+                    <div class="image-slide">
+                        <img src="img/knightInGame.png" 
+                            alt="In game Knight Animation" 
+                            class="project-image"
+                            onerror="this.onerror=null;this.src='https://placehold.co/800x450/07376f/FFFFFF?text=Visual+Placeholder'">
+                        <p class="caption">In game Knight Animation</p>
+                    </div>
+                </div> 
+                <button class="gallery-control prev-btn">❮</button>
+                <button class="gallery-control next-btn">❯</button>
+                <div class="colorbar_footer"></div>
+            </div>
+            <p>
+            <strong>Character modeling, rigging, animation, in engine implementation</strong><br>
+            I was tasked to make the full character pipeline. Starting from the concept art of the characters sketches, 3D Character Modeling, Ringing, animation and the implementation in engine of the character animation blueprint and trigger.
+            </p>
+            <div class="topline"></div><br>
+
+            <!-- SECTION 3 -->
+            <h4>Level Design. Environmental design</h4>
+            
+            <div class="image-container image-gallery">
+                <div class="gallery-slides">
+                    <div class="image-slide active">
+                        <img src="img/World 1-4  Blockout.jpg" 
+                            alt="Sketch of level design" 
+                            class="project-image"
+                            onerror="this.onerror=null;this.src='https://placehold.co/800x450/07376f/FFFFFF?text=Visual+Placeholder'">
+                        <p class="caption">Sketch of level design</p>
+                    </div>
+        
+                    <div class="image-slide">
+                        <img src="img/World1-4.png" 
+                            alt="Top view of level in engine" 
+                            class="project-image"
+                            onerror="this.onerror=null;this.src='https://placehold.co/800x450/07376f/FFFFFF?text=Visual+Placeholder'">
+                        <p class="caption">Top view of level in engine</p>
+                    </div>
+        
+                    <div class="image-slide">
+                        <img src="img/EnviromentDesign.png" 
+                            alt="Enviromental design of level" 
+                            class="project-image"
+                            onerror="this.onerror=null;this.src='https://placehold.co/800x450/07376f/FFFFFF?text=Visual+Placeholder'">
+                        <p class="caption">Enviromental design of level</p>
+
+                    </div>
+
+                   
+                </div> 
+                <button class="gallery-control prev-btn">❮</button>
+                <button class="gallery-control next-btn">❯</button>
+                <div class="colorbar_footer"></div>
+            </div>
+            <p>
+            <strong>Creation of concept level</strong><br>
+            The direction of the gameplay goes from left to right. For passive story telling, the area of the goblin’s forest is full of plants. On the other hand, the human territories are depleted. 
+            <br>Keeping in mind the bending of the world. I created designated paths where the player can go through. There are openings that tell the player where to go in order to find items and objectives.</p>
+            </p>
+            <div class="topline"></div><br>
+
+
+            <!-- SECTION 3: 2 Concept Art -->
+            <h4>2D Concept Art</h4>
+            <div class="image-container image-gallery">
+                <div class="gallery-slides">
+                    <div class="image-slide active">
+                        <img src="img/Knight expresion.png" 
+                            alt="Knight Expresions" 
+                            class="project-image"
+                            onerror="this.onerror=null;this.src='https://placehold.co/800x450/07376f/FFFFFF?text=Visual+Placeholder'">
+                        <p class="caption">Knight Expresions</p>
+                    </div>
+        
+                    <div class="image-slide">
+                        <img src="img/KnightIllustration.png" 
+                            alt="Knight Action Pose" 
+                            class="project-image"
+                            onerror="this.onerror=null;this.src='https://placehold.co/800x450/07376f/FFFFFF?text=Visual+Placeholder'">
+                        <p class="caption">Knight Action Pose</p>
+                    </div>
+        
+                    <div class="image-slide">
+                        <img src="img/goblin_faces.png" 
+                            alt="Goblin Expresions" 
+                            class="project-image"
+                            onerror="this.onerror=null;this.src='https://placehold.co/800x450/07376f/FFFFFF?text=Visual+Placeholder'">
+                        <p class="caption">Goblin Expresions</p>
+
+                    </div>
+
+                    <div class="image-slide">
+                        <img src="img/goblinIllustration.png" 
+                            alt="Goblin Action Pose" 
+                            class="project-image"
+                            onerror="this.onerror=null;this.src='https://placehold.co/800x450/07376f/FFFFFF?text=Visual+Placeholder'">
+                        <p class="caption">Goblin Action Pose</p>
+                    </div>
+
+
+                </div> 
+                <button class="gallery-control prev-btn">❮</button>
+                <button class="gallery-control next-btn">❯</button>
+                <div class="colorbar_footer"></div>
+            </div>
+            <p>
+            <strong>Character expressions and action pose</strong><br>
+            I was also asked to make the character illustration for different in game and promotional usage. I began with some textured borders. Eventually we decide the cell shading style so it matches the in game rendering system.
+            </p>
+            <div class="topline"></div><br>
+            
+
+            <!-- SECTION 4: 3D Assets -->   
+            <h4>Environment 3D Assets</h4>
+            <div class="image-container image-gallery">
+                <div class="gallery-slides">
+                    <div class="image-slide active">
+                        <img src="img/TreeSketch.jpg" 
+                            alt="Fire Tree Sketch" 
+                            class="project-image"
+                            onerror="this.onerror=null;this.src='https://placehold.co/800x450/07376f/FFFFFF?text=Visual+Placeholder'">
+                        <p class="caption">Fire Tree Sketch</p>
+                    </div>
+        
+                    <div class="image-slide">
+                        <img src="img/tree3D.png" 
+                            alt="Fire Tree 3D Model" 
+                            class="project-image"
+                            onerror="this.onerror=null;this.src='https://placehold.co/800x450/07376f/FFFFFF?text=Visual+Placeholder'">
+                        <p class="caption">Fire Tree 3D Model</p>
+                    </div>
+        
+                    <div class="image-slide">
+                        <img src="img/inGameTree.png" 
+                            alt="Fire Tree in Game" 
+                            class="project-image"
+                            onerror="this.onerror=null;this.src='https://placehold.co/800x450/07376f/FFFFFF?text=Visual+Placeholder'">
+                        <p class="caption">Fire Tree in Game</p>
+
+                    </div>
+
+                    <div class="image-slide">
+                        <img src="img/TreeShrink.png" 
+                            alt="Fire Tree Shrinking Animation Blueprint" 
+                            class="project-image"
+                            onerror="this.onerror=null;this.src='https://placehold.co/800x450/07376f/FFFFFF?text=Visual+Placeholder'">
+                        <p class="caption">Fire Tree Shrinking Animation Blueprint</p>
+                    </div>
+
+                    <div class="image-slide">
+                        <img src="img/Camp.png" 
+                            alt="Goblin Camp 3D Model" 
+                            class="project-image"
+                            onerror="this.onerror=null;this.src='https://placehold.co/800x450/07376f/FFFFFF?text=Visual+Placeholder'">
+                        <p class="caption">Goblin Camp 3D Model</p>
+                    </div>
+
+                </div> 
+                <button class="gallery-control prev-btn">❮</button>
+                <button class="gallery-control next-btn">❯</button>
+                <div class="colorbar_footer"></div>
+            </div>
+            <p>
+            <strong>Main interactable assets</strong><br>
+            I was tasked to create some of the important assets for the game. The rest were asset packs, so the style had to be similar. I created the Fire Tree, fire fruit and their respective in game simple animations. The goblin camp asset is going to have the same treatment. 
+            </p>
+            <div class="topline"></div><br>
+
+
+
+            <!-- SECTION 4: Conclusion -->
+            <h2>Reflection</h2>
+            <p>
+                My involvement with Glory for Goblins will continue until August 2026. The objective is to have a project that can be handed down to new members of the studio to practice level and environmental design.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- FLOATING MENU BAR -->
+    <div class="floating-menu">
+        <!-- New inner container to align content with site max-width -->
+        <div class="floating-menu-inner">
+            <a href="index.html" class="float-btn back">Back</a>
+            <a href="https://theebiscuits.itch.io/glory-for-goblins" target="_blank" class="float-btn play">Download Page</a>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/jorge-rosero-270a1536a/" target="_blank" class="social-icon">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://elyurch.itch.io/" target="_blank" class="social-icon">
+                <i class="fab fa-itch-io"></i>
+            </a>
+            <a href="mailto:jer00032@mix.wvu.edu" class="social-icon">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+        © 2024 Jorge Rosero
+    </footer>
+
+ <script>
+    function setupImageGallery(gallerySelector) {
+        const galleries = document.querySelectorAll(gallerySelector);
+
+        galleries.forEach(gallery => {
+            const slides = gallery.querySelectorAll('.image-slide');
+            const prevBtn = gallery.querySelector('.prev-btn');
+            const nextBtn = gallery.querySelector('.next-btn');
+            let slideIndex = 0;
+            let autoScrollInterval; // Variable to store the timer
+
+            // Initialize: Set the first slide as active
+            if (slides.length > 0) {
+                slides[0].classList.add('active');
+                // Start auto-scrolling immediately
+                startAutoScroll();
+            }
+
+            function showSlides(n) {
+                // Remove active class from current slide
+                slides[slideIndex].classList.remove('active');
+
+                // Calculate the new index
+                slideIndex += n;
+                if (slideIndex >= slides.length) {
+                    slideIndex = 0; 
+                }
+                if (slideIndex < 0) {
+                    slideIndex = slides.length - 1; 
+                }
+
+                // Add active class to the new slide
+                slides[slideIndex].classList.add('active');
+            }
+
+            // Function to start the automatic timer
+            function startAutoScroll() {
+                // Change slide every 4000ms (4 seconds)
+                autoScrollInterval = setInterval(() => {
+                    showSlides(1);
+                }, 4000); 
+            }
+
+            // Function to stop the timer (called when user clicks buttons)
+            function stopAutoScroll() {
+                if (autoScrollInterval) {
+                    clearInterval(autoScrollInterval);
+                    autoScrollInterval = null; // Prevent multiple clears
+                }
+            }
+
+            // Event listeners for buttons
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => {
+                    stopAutoScroll(); // Stop auto-scrolling
+                    showSlides(-1);   // Go back manually
+                });
+            }
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => {
+                    stopAutoScroll(); // Stop auto-scrolling
+                    showSlides(1);    // Go forward manually
+                });
+            }
+        });
+    }
+
+    // Call the function for your gallery
+    setupImageGallery('.image-gallery');
+    </script>
+
+</body>
+</html>

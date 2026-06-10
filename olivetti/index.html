@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<!-- 
+Change keyframes so the animation doesnt aling.
+After clicking another bottom restart all of the animations son they dont de sync.
+change the top bottom.
+-->
+<html>
+    <head>  
+        <title>Olivetti - Summa 19</title>
+
+        <link href="css/landscape.css" rel="stylesheet" media="all and (orientation:landscape)" type="text/css">
+        <link href="css/portrait.css" rel="stylesheet" media="all and (orientation:portrait)" type="text/css">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+
+            <div id="content">
+                <img src="img/printer.png" id="printer">
+                <img src="img/paper_small.png" id="p1">
+                <audio id="sound2">
+                    <source src="audio/clicktear.mp3" type="audio/mp3"> 
+                </audio>
+
+                <div id="b1"><audio id="sound1">
+                    <source src="audio/clicktear.mp3" type="audio/mp3"> 
+                </audio></div>
+
+                <div id="b2"><audio id="sound1">
+                    <source src="audio/clicktear.mp3" type="audio/mp3"> 
+                </audio></div>
+
+                <div id="b3"><audio id="sound1">
+                    <source src="audio/clicktear.mp3" type="audio/mp3"> 
+                </audio></div>
+
+                <div id="b4"><audio id="sound1">
+                    <source src="audio/clicktear.mp3" type="audio/mp3"> 
+                </audio></div>
+
+                <div id="b5"><audio id="sound1">
+                    <source src="audio/clicktear.mp3" type="audio/mp3">
+                </audio></div>
+
+            <div id="banner">
+                <h2>Olivetti</h2>
+                <h1>Summa 19</h1>
+            </div>
+
+            <div class="f1">
+                <h1>The company</h1>
+                <p>is an Italian manufacturer of computers, tablets, smartphones, printers and other such business products as calculators and fax machines. Between 1954 and 2001, Italy's Association of Industrial Design (ADI) awarded 16 Compasso d'Oro prizes to Olivetti products and designs – more than any other company or designer.</p>
+            </div>
+
+            <div class="f2">
+                <h1>Electro-mechanic</h1>
+                <p>The MC 19 is an electric writing adding machine with negative balance. The capacity is ten digits in calculation and eleven in total. It writes only in black and always performs single spacing. The operating speed is 200 cycles per minute. It is equipped with a repeater key, column indicator, manual setting corrector and the "do not calculate" key.</p>
+            </div>
+
+            <div class="f3">
+                <h1>Ettore Sottsass</h1>
+                <p>(14 September 1917 – 31 December 2007) The designer was an Italian architect, product designer and a former militant of the Italian Republican Fascist Party. He was known for his designs of furniture, jewelry, glass, lighting, homeware and office supplies. He also worked on numerous buildings and interiors, often defined by bold colors. </p>
+            </div>
+
+            <div class="f4">
+                <h1>The Predecessors</h1>
+                <p>The Lexicon 80 and the portable Lettera 22 typewriters, which were released in 1948 and 1950 respectively. Ettore Sottsass began consulting for Olivetti in the late 1950s and designed a series of products including the Tekne 3 typewriter in 1958, the Elea 9003 computer in 1959, and later, the Praxis 48 typewriter in 1964 and the Valentine portable typewriter in 1969.</p>
+            </div>
+
+            <div class="f5">
+                <h1>The Award</h1>
+                <p>After the success of the Olivetti Valentine, Ettore Sottsass and Hans von Klier teamed up again to design the Summa 19 mechanical calculator. Again, they would win the Golden Compass award in 1970, but the calculator itself was not that successful due to smaller electronic calculators produced by competitors.</p>
+            </div>
+
+        </div>
+    </body>
+
+
+
+    <script>
+        /* this functions restarts the animations of all of the buttoms */
+        function animRe(){
+        buttom1.style.animation = 'none';
+        buttom1.offsetHeight; /* trigger reflow */
+        buttom1.style.animation = null;
+
+        buttom2.style.animation = 'none';
+        buttom2.offsetHeight; /* trigger reflow */
+        buttom2.style.animation = null;
+
+        buttom3.style.animation = 'none';
+        buttom3.offsetHeight; /* trigger reflow */
+        buttom3.style.animation = null;
+
+        buttom4.style.animation = 'none';
+        buttom4.offsetHeight; /* trigger reflow */
+        buttom4.style.animation = null;
+
+        buttom5.style.animation = 'none';
+        buttom5.offsetHeight; /* trigger reflow */
+        buttom5.style.animation = null;
+        }
+
+        function tearPaper(){
+        paper_small.style.animation = 'none';
+        paper_small.offsetHeight; // Trigger reflow
+        paper_small.style.animation = null;
+        paper_small.style.animation = "p1a 1s 1";
+        }
+
+        var 
+        paper_small = document.getElementById("p1"),
+        buttom1 = document.getElementById("b1"),
+        buttom2 = document.getElementById("b2"),
+        buttom3 = document.getElementById("b3"),
+        buttom4 = document.getElementById("b4"),
+        buttom5 = document.getElementById("b5")
+        
+        $('#b1').click(function() {
+        tearPaper()
+        buttom1.id='bd1';
+        buttom2.id='b2';
+        buttom3.id='b3';
+        buttom4.id='b4';
+        buttom5.id='b5';
+            $('.f1').show("1500");
+            $('.f2').hide("500");
+            $('.f3').hide("500");
+            $('.f4').hide("500");
+            $('.f5').hide("500");
+        $('#sound1').trigger("play");
+        $('#sound2').trigger("pause").prop("currentTime",0);
+        $('#sound3').trigger("pause").prop("currentTime",0);
+        $('#sound4').trigger("pause").prop("currentTime",0);
+        $('#sound5').trigger("pause").prop("currentTime",0);
+        animRe()  /* finally, restart */
+        })
+        
+        $('#b2').click(function() {
+        tearPaper()
+        buttom1.id='b1';
+        buttom2.id='bd2';
+        buttom3.id='b3';
+        buttom4.id='b4';
+        buttom5.id='b5';
+            $('.f1').hide("500");
+            $('.f2').show("1500");
+            $('.f3').hide("500");
+            $('.f4').hide("500");
+            $('.f5').hide("500");
+        $('#sound1').trigger("play");
+        $('#sound2').trigger("pause").prop("currentTime",0);
+        $('#sound3').trigger("pause").prop("currentTime",0);
+        $('#sound4').trigger("pause").prop("currentTime",0);
+        $('#sound5').trigger("pause").prop("currentTime",0);
+        animRe()
+        })
+
+        $('#b3').click(function() {
+        tearPaper()
+        buttom1.id='b1';
+        buttom2.id='b2';
+        buttom3.id='bd3';
+        buttom4.id='b4';
+        buttom5.id='b5';
+            $('.f1').hide("500");
+            $('.f2').hide("500");
+            $('.f3').show("1500");
+            $('.f4').hide("500");
+            $('.f5').hide("500");
+        $('#sound1').trigger("play");
+        $('#sound2').trigger("pause").prop("currentTime",0);
+        $('#sound3').trigger("pause").prop("currentTime",0);
+        $('#sound4').trigger("pause").prop("currentTime",0);
+        $('#sound5').trigger("pause").prop("currentTime",0);
+        animRe()
+        })
+
+        $('#b4').click(function() {
+        tearPaper()    
+        buttom1.id='b1';
+        buttom2.id='b2';
+        buttom3.id='b3';
+        buttom4.id='bd4';
+        buttom5.id='b5';
+            $('.f1').hide("500");
+            $('.f2').hide("500");
+            $('.f3').hide("500");
+            $('.f4').show("1500");
+            $('.f5').hide("500");
+        $('#sound1').trigger("play");
+        $('#sound2').trigger("pause").prop("currentTime",0);
+        $('#sound3').trigger("pause").prop("currentTime",0);
+        $('#sound4').trigger("pause").prop("currentTime",0);
+        $('#sound5').trigger("pause").prop("currentTime",0);
+        animRe()
+        })
+
+        $('#b5').click(function() {
+        tearPaper()
+        buttom1.id='b1';
+        buttom2.id='b2';
+        buttom3.id='b3';
+        buttom4.id='b4';
+        buttom5.id='bd5';
+            $('.f1').hide("500");
+            $('.f2').hide("500");
+            $('.f3').hide("500");
+            $('.f4').hide("500");
+            $('.f5').show("1500");
+        $('#sound1').trigger("play");
+        $('#sound2').trigger("pause").prop("currentTime",0);
+        $('#sound3').trigger("pause").prop("currentTime",0);
+        $('#sound4').trigger("pause").prop("currentTime",0);
+        $('#sound5').trigger("pause").prop("currentTime",0);
+        animRe()
+        })
+    </script>
+</html>

@@ -1,0 +1,181 @@
+*
+{ 
+    transition: .5s;
+}
+
+
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Make body at least viewport height */
+    background-color: #f0f0f0; /* Fallback background color */
+    background-image: url('img/background.jpg'); /* Placeholder for your image */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    background-position: center; /* Center the image */
+    background-size: cover; /* Adjust size to cover the viewport */
+    margin: 0; /* Remove default body margin */
+}
+
+
+.container {
+    background-image: url('img/container_bg.png');
+    background-repeat: no-repeat; /* Prevent image repetition */
+    background-position: center; /* Center the image */
+    background-size: cover;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    width: 80%;
+    max-width: 800px;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+h1 {
+    color: rgb(236,178,86);
+    word-wrap: normal;
+    font-family: "Rancho", cursive;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 6em;
+    margin-bottom: -50px;
+    text-shadow: 10px 10px 10px rgb(40,27,50);
+}
+
+#player-selection {
+    width: 100%;
+    color: rgb(236,178,86);
+    font-weight: 200;
+    font-size: 2em;
+}
+
+#player-selection.hidden {
+    display: none !important;
+}
+
+#game-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+#game-area.hidden {
+    display: none !important;
+}
+
+#players {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    position: relative;
+    width: 100%;
+    height: 110px; /* Adjusted height for the GIFs */
+}
+
+.player-container {
+    position: absolute;
+    bottom: 0;
+    width: 110px; /* Match GIF width */
+    height: 165px; /* Match GIF height */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Align GIF to the bottom */
+}
+
+.player {
+    width: 110px; /* Match GIF width */
+    height: 165px; /* Match GIF height */
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out;
+}
+
+.player.exploded {
+    filter: brightness(0.5); /* Make the miner GIF darker */
+    background-image: url('img/explosion.png');
+    background-size: cover;
+}
+
+#levers-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.lever {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #ccc;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.lever:hover {
+    background-color: #bbb;
+}
+
+#message {
+    color: rgb(236,178,86);
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 2em;
+    text-shadow: 5px 5px 5px rgb(40,27,50);
+}
+
+#reset-round-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#reset-round-btn:hover {
+    background-color: #45a049;
+}
+
+#restart-game-btn {
+    padding: 10px 20px;
+    background-color: rgb(236,178,86);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+#restart-game-btn:hover {
+    background-color: rgb(163,122,74);
+}
+
+#start-game-btn{ 
+    padding: 8px 10px;
+    background-color: rgb(236,178,86);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#num-players{
+    padding: 8px 10px;
+    font-size: 20px;
+    text-align: center;
+}
