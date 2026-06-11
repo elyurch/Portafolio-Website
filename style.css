@@ -148,7 +148,7 @@ p{
   background-color: rgba(24,176,230, 0.1);
 }
 .aboutText{
-  padding: 2rem;
+  padding-left: 2rem; padding-right: 2rem; padding-bottom: 2rem;
 }
 
 .colorbar_footer {
